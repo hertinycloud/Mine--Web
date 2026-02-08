@@ -495,3 +495,33 @@ span{
         content: "Full-Stack Developer";
     }
 }
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px){
+
+    .home{
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    section{
+        min-height: auto;
+        padding: 6rem 7%;
+    }
+
+    .home-img img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .social-icons{
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        align-self: center;
+    }
+}
