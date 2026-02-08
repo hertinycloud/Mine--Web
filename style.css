@@ -525,3 +525,12 @@ span{
         align-self: center;
     }
 }
+
+.footer{
+    text-align: center;
+    padding: 2rem;
+    background: #0d0d0d;
+    color: #aaa;
+    font-size: 1.4rem;
+    border-top: 1px solid #222;
+}
