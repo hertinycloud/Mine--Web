@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: black;
+    color: white;
+}
+
+/* ================= HEADER ================= */
+header{
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* LOGO */
+.logo{
+    font-size: 3rem;
+    color: #ff4d8d;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+/* ================= NAVBAR ================= */
+.navbar ul{
+    display: flex;                 /* FIX */
+    align-items: center;           /* FIX */
+    list-style: none;              /* FIX */
+}
+
+.navbar ul li{
+    margin-left: 4rem;             /* FIX */
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+    color: #ff4d8d;
+    border-bottom: 3px solid #ff4d8d;
+}
+
+/* ================= MOBILE NAV ================= */
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        display: none;
+        top: 100%;
+        right: 9%;
+        width: 40%;
+        border-left: 3px solid #ff4d8d;
+        border-bottom: 3px solid #ff4d8d;
+        border-bottom-left-radius: 2rem;
+        background-color: #161616;
+    }
+
+    nav.active{
+        display: block;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .navbar ul li{
+        margin: 2rem 0;
+    }
+
+    nav a{
+        display: block;
+        font-size: 2rem;
+    }
+
+    nav a:hover,
+    nav a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #ff4d8d;
+    }
+}
+
+/* ================= SECTIONS ================= */
+section{
+    min-height: 100vh;
+    padding: 8rem 9% 5rem;
+    scroll-margin-top: 100px;
+}
+
+/* ================= HOME ================= */
+.home{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span{
+    color: #ff4d8d;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+/* IMAGE */
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    border-radius: 12px;
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+.services{
+    background-color: black;
+    padding: 6rem 9%;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+.section-title span{
+    color: #ff4d8d;
+}
+
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.service-box{
+    background-color: #111;
+    border: 2px solid #ff4d8d;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-box i{
+    font-size: 4rem;
+    color: #ff4d8d;
+    margin-bottom: 1.5rem;
+}
+
+.service-box h3{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.service-box p{
+    font-size: 1.5rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.service-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+.skills{
+    background-color: black;
+    padding: 6rem 9%;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.skill-box{
+    background-color: #111;
+    border: 2px solid #ff4d8d;
+    border-radius: 1.5rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.skill-box i{
+    font-size: 4rem;
+    color: #ff4d8d;
+    margin-bottom: 1.5rem;
+}
+
+.skill-box h3{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.skill-box p{
+    font-size: 1.5rem;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.skill-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+.education{
+    background-color: black;
+    padding: 6rem 9%;
+}
+
+.education-container{
+    display: flex;
+    justify-content: center;
+}
+
+.education-box{
+    background-color: #111;
+    border: 2px solid #ff4d8d;
+    border-radius: 1.5rem;
+    padding: 4rem 3rem;
+    text-align: center;
+    max-width: 600px;
+    transition: 0.3s ease;
+}
+
+.education-box i{
+    font-size: 4rem;
+    color: #ff4d8d;
+    margin-bottom: 1.5rem;
+}
+
+.education-box h3{
+    font-size: 2.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.education-box h4{
+    font-size: 1.9rem;
+    color: #ff4d8d;
+    margin-bottom: 0.5rem;
+}
+
+.education-box span{
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+.education-box p{
+    font-size: 1.5rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.education-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+.projects{
+    background-color: black;
+    padding: 6rem 9%;
+}
+
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.project-box{
+    background-color: #111;
+    border: 2px solid #ff4d8d;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    transition: 0.3s ease;
+}
+
+.project-box h3{
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-status{
+    display: inline-block;
+    font-size: 1.3rem;
+    color: black;
+    background-color: #ff4d8d;
+    padding: 0.3rem 1.2rem;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-box p{
+    font-size: 1.5rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.project-box .tech{
+    margin-top: 1.5rem;
+    color: #ff4d8d;
+    font-size: 1.4rem;
+}
+
+.project-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+.contact{
+    background-color: black;
+    padding: 6rem 9%;
+}
+
+.contact-container{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.contact-box{
+    background-color: #111;
+    border: 2px solid #ff4d8d;
+    border-radius: 1.5rem;
+    padding: 3rem 4rem;
+    text-align: center;
+    min-width: 260px;
+    transition: 0.3s ease;
+}
+
+.contact-box i{
+    font-size: 3.5rem;
+    color: #ff4d8d;
+    margin-bottom: 1.5rem;
+}
+
+.contact-box h3{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-box p a{
+    font-size: 1.6rem;
+    color: #ddd;
+    text-decoration: none;
+}
+
+.contact-box p a:hover{
+    color: #ff4d8d;
+}
+
+.contact-box:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+
+/* ================= SOCIAL ICONS ================= */
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #ff4d8d;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #ff4d8d;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #ff4d8d;
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+/* ================= BUTTON ================= */
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #ff4d8d;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #ff4d8d;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #ff4d8d;
+    color: black;
+    box-shadow: 0 0 25px #ff4d8d;
+}
+
+/* ================= TYPING TEXT ================= */
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span::before{
+    content: "Web Developer";
+    animation: words 20s infinite;
+}
+
+
+.typing-text span::after{
+    content: "";
+    position: absolute;
+    right: -8px;
+    width: 2px;
+    height: 100%;
+    background-color: #ff4d8d;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes words{
+    0%, 25%{
+        content: "Web Designer";
+    }
+    26%, 50%{
+        content: "Web Developer";
+    }
+    51%, 75%{
+        content: "Passionate Developer";
+    }
+    76%, 100%{
+        content: "Full-Stack Developer";
+    }
+}
