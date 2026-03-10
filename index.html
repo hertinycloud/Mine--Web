@@ -40,22 +40,20 @@
         </h3>
 
         <p>
-            I’m a web designer and a passionate developer who constantly works on improving skills in day-to-day life.
+            I'm a web designer and a passionate developer who constantly works on improving skills in day-to-day life.
             I enjoy designing clean, modern interfaces and turning ideas into real, functional web experiences.
             With a strong interest in full-stack development, I aim to design and build applications the way a complete
             full-stack developer does — focusing on both user experience and solid functionality.
         </p>
 
         <div class="social-icons">
-    <a href="https://www.linkedin.com/in/dhanalakshmi-k-aba8553a9/" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
-
-    <a href="https://github.com/hertinycloud" target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
-</div>
-
+            <a href="https://www.linkedin.com/in/dhanalakshmi-k-aba8553a9/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/hertinycloud" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
 
         <a href="#contact" class="btn">Hire me</a>
     </div>
@@ -142,11 +140,11 @@
     <div class="education-container">
         <div class="education-box">
             <i class="fa-solid fa-graduation-cap"></i>
-            <h3>Bachelor’s Degree</h3>
+            <h3>Bachelor's Degree</h3>
             <h4>Soka Ikeda College of Arts and Science for Women</h4>
             <span>Chennai, Tamil Nadu</span>
             <p>
-                I am currently pursuing my bachelor’s degree, where I am building a strong
+                I am currently pursuing my bachelor's degree, where I am building a strong
                 foundation in programming, software development, and web technologies,
                 while continuously improving my practical and technical skills.
             </p>
@@ -155,32 +153,37 @@
 </section>
 
 <section class="projects" id="projects">
-    <h2 class="section-title">Projects in Progress</h2>
+    <h2 class="section-title">My Projects</h2>
 
     <div class="projects-container">
+
         <div class="project-box">
-            <h3>Portfolio Website</h3>
-            <span class="project-status">In Progress</span>
+            <div class="project-thumbnail">
+                <img src="vehicle_project.png" alt="AutoCarePro Project Screenshot">
+            </div>
+            <h3>AutoCarePro – Vehicle Service Portal</h3>
             <p>
-                Designing and developing a personal portfolio website focused on a
-                responsive layout and modern user interface to showcase skills and projects.
+                A full-featured vehicle service portal with user, admin, and employee login panels.
+                Includes service booking, OEM parts tracking, and a modern responsive UI.
+            </p>
+            <p class="tech">
+                <strong>Technologies:</strong> HTML, CSS, JavaScript, ASP.NET
+            </p>
+        </div>
+
+        <div class="project-box">
+            <div class="project-thumbnail">
+                <img src="grocerylandingpage.png" alt="FreshDrop Grocery Landing Page Screenshot">
+            </div>
+            <h3>FreshDrop – Grocery Landing Page</h3>
+            <p>
+            A grocery delivery landing page built with HTML, CSS, and JavaScript, featuring product listings, smooth animations, and a clean dark-themed responsive design.
             </p>
             <p class="tech">
                 <strong>Technologies:</strong> HTML, CSS, JavaScript
             </p>
         </div>
 
-        <div class="project-box">
-            <h3>Responsive Landing Page</h3>
-            <span class="project-status">In Progress</span>
-            <p>
-                Creating a mobile-first landing page design with clean UI,
-                smooth hover interactions, and a strong focus on usability.
-            </p>
-            <p class="tech">
-                <strong>Technologies:</strong> HTML, CSS, Flexbox
-            </p>
-        </div>
     </div>
 </section>
 
@@ -209,9 +212,30 @@
         </div>
     </div>
 </section>
+
 <footer class="footer">
     <p>© 2026 Dhanalakshmi | All Rights Reserved</p>
 </footer>
+
+<script>
+    const menuBar = document.getElementById('menu-bar');
+    const navbar = document.querySelector('.navbar');
+    const navLinks = document.querySelectorAll('nav a');
+
+    menuBar.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        menuBar.classList.toggle('fa-times');
+        menuBar.classList.toggle('fa-bars');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            menuBar.classList.remove('fa-times');
+            menuBar.classList.add('fa-bars');
+        });
+    });
+</script>
 
 </body>
 </html>

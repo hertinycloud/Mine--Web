@@ -51,6 +51,7 @@ header{
 }
 
 .navbar ul{
+<<<<<<< HEAD
     display: flex;                 
     align-items: center;           
     list-style: none;              
@@ -58,6 +59,15 @@ header{
 
 .navbar ul li{
     margin-left: 4rem;             
+=======
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar ul li{
+    margin-left: 4rem;
+>>>>>>> 4464ffe (Updated design and added project images)
 }
 
 nav a{
@@ -75,17 +85,33 @@ nav a.active{
 }
 
 
+<<<<<<< HEAD
+=======
+/* ================= HAMBURGER ICON ================= */
+#menu-bar{
+    display: none;
+    font-size: 2.8rem;
+    color: #ff4d8d;
+    cursor: pointer;
+    z-index: 101;
+}
+
+/* ================= MOBILE NAV ================= */
+>>>>>>> 4464ffe (Updated design and added project images)
 @media(max-width:995px){
+    #menu-bar{
+        display: block;
+    }
+
     nav{
         position: absolute;
         display: none;
         top: 100%;
-        right: 9%;
-        width: 40%;
-        border-left: 3px solid #ff4d8d;
-        border-bottom: 3px solid #ff4d8d;
-        border-bottom-left-radius: 2rem;
-        background-color: #161616;
+        left: 0;
+        width: 100%;
+        border-top: 2px solid #ff4d8d;
+        background-color: #0d0d0d;
+        z-index: 999;
     }
 
     nav.active{
@@ -94,27 +120,44 @@ nav a.active{
 
     .navbar ul{
         flex-direction: column;
-        padding: 2rem;
+        align-items: flex-start;
+        padding: 1rem 9%;
+        gap: 0;
     }
 
     .navbar ul li{
-        margin: 2rem 0;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid #222;
+        padding: 1.2rem 0;
+    }
+
+    .navbar ul li:last-child{
+        border-bottom: none;
     }
 
     nav a{
         display: block;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        width: 100%;
+        padding: 0;
+        border-bottom: none;
     }
 
     nav a:hover,
     nav a.active{
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border-bottom: 0.5rem solid #ff4d8d;
+        color: #ff4d8d;
+        padding-left: 1rem;
+        border-bottom: none;
+        border-left: 3px solid #ff4d8d;
     }
 }
 
 
+<<<<<<< HEAD
+=======
+/* ================= SECTIONS ================= */
+>>>>>>> 4464ffe (Updated design and added project images)
 section{
     min-height: 100vh;
     padding: 8rem 9% 5rem;
@@ -326,6 +369,29 @@ span{
     border-radius: 1.5rem;
     padding: 3rem;
     transition: 0.3s ease;
+    overflow: hidden;
+}
+
+/* ================= PROJECT THUMBNAIL ================= */
+.project-thumbnail {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1.5px solid #ff4d8d44;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project-box:hover .project-thumbnail img {
+    transform: scale(1.05);
 }
 
 .project-box h3{
@@ -518,6 +584,10 @@ span{
 
     .btn{
         align-self: center;
+    }
+
+    .project-thumbnail img {
+        height: 160px;
     }
 }
 
