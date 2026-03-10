@@ -51,15 +51,6 @@ header{
 }
 
 .navbar ul{
-<<<<<<< HEAD
-    display: flex;                 
-    align-items: center;           
-    list-style: none;              
-}
-
-.navbar ul li{
-    margin-left: 4rem;             
-=======
     display: flex;
     align-items: center;
     list-style: none;
@@ -67,7 +58,6 @@ header{
 
 .navbar ul li{
     margin-left: 4rem;
->>>>>>> 4464ffe (Updated design and added project images)
 }
 
 nav a{
@@ -85,8 +75,6 @@ nav a.active{
 }
 
 
-<<<<<<< HEAD
-=======
 /* ================= HAMBURGER ICON ================= */
 #menu-bar{
     display: none;
@@ -97,7 +85,6 @@ nav a.active{
 }
 
 /* ================= MOBILE NAV ================= */
->>>>>>> 4464ffe (Updated design and added project images)
 @media(max-width:995px){
     #menu-bar{
         display: block;
@@ -154,10 +141,7 @@ nav a.active{
 }
 
 
-<<<<<<< HEAD
-=======
 /* ================= SECTIONS ================= */
->>>>>>> 4464ffe (Updated design and added project images)
 section{
     min-height: 100vh;
     padding: 8rem 9% 5rem;
@@ -475,8 +459,6 @@ span{
     box-shadow: 0 0 25px #ff4d8d;
 }
 
-
-
 .social-icons a{
     display: inline-flex;
     justify-content: center;
@@ -530,7 +512,6 @@ span{
     content: "Web Developer";
     animation: words 20s infinite;
 }
-
 
 .typing-text span::after{
     content: "";
